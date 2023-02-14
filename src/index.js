@@ -5,19 +5,20 @@ import reportWebVitals from "./reportWebVitals";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 
-import usersReducer from "./features/Users";
-
+import usersReducer from './features/Users'
 const store = configureStore({
   reducer: {
-    users: usersReducer,
-  },
-});
+ users: usersReducer,
+  }
+})
+
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
     </Provider>
+
   </React.StrictMode>,
   document.getElementById("root")
 );
